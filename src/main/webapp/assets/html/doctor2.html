@@ -1,0 +1,647 @@
+<html>
+<head>
+<title>hospital-doctors</title>
+<meta charset="UTF-8" />
+		<title>title</title>
+		<title>Bootstrap Example</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+		<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="../css/headerfooter.css">
+		<link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+		<link rel="text/css" href="../css/doctors.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+<style>
+     .doc-info__tabs {
+    min-height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 95%;
+	padding:0;
+}
+.doc-info__tab_item {
+    list-style-type: none;
+    padding-bottom: 1em;
+    border-bottom: 0.7px solid #e0e0e0;
+}
+.doc-info__tab_item a {
+    font-family: Plus Jakarta Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #757575;
+	text-decoration:none;
+}
+.doc-info__tab_item:hover a {
+  color: #1977cc;
+    border-bottom: 1px solid #1977cc;
+}
+
+.d-p-info_col-3scroll-tabs_item--active {
+    border-bottom: 0.7px solid #004e9e;
+}
+.doc-info__col-3 {
+    flex: 0 0 23%;
+    border: 1px solid black;
+    background: #ffffff;
+    border: 1px solid #bdbdbd;
+    border-radius: 20px;
+    padding: 2em;
+}
+@media screen and (min-width: 1366px) and (max-width: 1439px){
+.doc-info__tab_item {
+    padding: 1.25em 0 1em;
+}
+.doc-info__tab_item a {
+    font-size: 14px!important;
+}
+}
+
+
+.d-p-info__col-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 0 0 30.5%;
+}
+.d-p-info__col-1 img {
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 10px;
+}
+
+ 
+ .d-p-info__col-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 0 0 36.5%;
+}
+
+@media screen and (min-width: 1366px) and (max-width: 1439px){
+.d-p-info__name {
+    margin-bottom: 0.5em;
+}
+}
+.d-p-info__name {
+    line-height: 40px!important;
+    font-size: 32px;
+    margin-bottom: 1em;
+}
+.d-p-info__designation {
+    font-family: Plus Jakarta Sans Bold;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 30px;
+    margin-bottom: 0.25em;
+}
+.d-p-info__speciality {
+    font-family: Plus Jakarta Sans;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 25px;
+    margin-bottom: 0.5em;
+}
+.d-p-info__location {
+    font-family: Plus Jakarta Sans;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+.section-heading {
+    font-family: Plus Jakarta Sans Semi Bold;
+    font-weight: 600!important;
+    font-size: 36px;
+    line-height: 30.5px;
+}
+.d-p-info__btn-wrapper {
+    display: flex;
+    gap: 2em;
+}
+.d-p-info_btn-wrapper_btn {
+    display: block;
+    min-height: 50px;
+    min-width: 133px;
+    width: max-content;
+    border-radius: 10px;
+    font-family: Plus Jakarta Sans;
+    font-weight: 600;
+    border: 1px solid #004e9e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px;
+    color: #424242;
+    font-size: 12px;
+    gap: 0.5em;
+}
+.d-p-info_btn-wrapper_btn span {
+    font-family: Plus Jakarta Sans;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+    color: #004e9e;
+}
+.d-p-info__appointment-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.d-p-info_appointment-wrapper_btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    cursor: pointer;
+}
+.d-p-info_appointment-wrapper_btn span {
+    font-family: Plus Jakarta Sans Bold;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #020202;
+}
+
+
+ .accordion_sec	 {
+     background-color: #f9f9fa
+ }
+
+ .flex {
+     -webkit-box-flex: 1;
+     -ms-flex: 1 1 auto;
+     flex: 1 1 auto
+ }
+
+ @media (max-width:991.98px) {
+     .padding {
+         padding: 1.5rem
+     }
+ }
+
+ @media (max-width:767.98px) {
+     .padding {
+         padding: 1rem
+     }
+ }
+
+ .padding {
+     padding: 5rem
+ }
+
+ .card {
+     box-shadow: none;
+     -webkit-box-shadow: none;
+     -moz-box-shadow: none;
+     -ms-box-shadow: none
+ }
+
+ .pl-3,
+ .px-3 {
+     padding-left: 1rem !important
+ }
+
+ .card {
+     position: relative;
+     display: flex;
+     flex-direction: column;
+     min-width: 0;
+     word-wrap: break-word;
+     background-color: #fff;
+     background-clip: border-box;
+     border: 1px solid #d2d2dc;
+     border-radius: 0
+ }
+
+ .card .card-title {
+     color: #000000;
+     margin-bottom: 0.625rem;
+     text-transform: capitalize;
+     font-size: 0.875rem;
+     font-weight: 500
+ }
+
+ .card .card-description {
+     margin-bottom: .875rem;
+     font-weight: 400;
+     color: #76838f
+ }
+ 
+ .accordion .card:first-of-type {
+    border-bottom: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.accordion .card {
+    margin-bottom: .75rem;
+    box-shadow: 0px 1px 15px 1px rgba(230, 234, 236, 0.35);
+    border-radius: .25rem;
+    border: none;
+}
+
+.accordion .card .card-header {
+    background-color: transparent;
+    border: none;
+    padding: 2rem;
+}
+
+.card-header:first-child {
+    border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
+}
+
+.accordion .card .card-header * {
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.mb-0, .my-0 {
+    margin-bottom: 0 !important;
+}
+
+.accordion .card .card-header a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    font-size: inherit;
+    position: relative;
+    -webkit-transition: color 0.5s ease;
+    -moz-transition: color 0.5s ease;
+    -ms-transition: color 0.5s ease;
+    -o-transition: color 0.5s ease;
+    transition: color 0.5s ease;
+    padding-right: 1.5rem;
+}
+
+.accordion .card .card-header * {
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.accordion .card .card-header a[aria-expanded="false"]:before {
+    content: "+";
+}
+
+.accordion .card .card-header a[aria-expanded="true"]:before {
+    content: "-";
+}
+
+.accordion .card .card-header a:before {
+    
+    position: absolute; 
+    right: 7px;
+    top: 0;
+    font-size: 18px;
+    display: block;
+    font-family: FontAwesome;
+      
+     display: inline-block;
+     padding-right: 3px;
+     vertical-align: middle;
+     font-size: .756em;
+     color: #405189
+}
+</style>
+</head>
+<body>
+ <!-- ======= Top Bar ======= -->
+ <div id="topbar" class="d-flex align-items-center fixed-top">
+  <div class="container d-flex align-items-center justify-content-center justify-content-md-between">
+    <div class="align-items-center d-none d-md-flex">
+      <i class="bi bi-geo-alt-fill"></i> Tarvanipeta, Mandapeta 533308
+    </div>
+    <div class="d-flex align-items-center">
+      <i class="bi bi-phone"></i> Call us now +91 62816 80037
+    </div>
+  </div>
+</div>
+<!-- ======= Top Bar Ends======= --> 
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top">
+  <div class="container d-flex align-items-center">
+    <a href="../../index.html" class="logo me-auto"><img src="../images/mainLogo.jpg" alt=""></a>
+      <nav id="navbar" class="navbar order-last order-lg-0">
+          <ul>
+              <li><a class="nav-link scrollto" href="../../index.html">Home</a></li>
+              <li><a class="nav-link scrollto" href="./aboutus.html">About Us</a></li>
+              <li class="dropdown"><a href="#" class="active"><span>Doctors</span> <i class="bi bi-chevron-down"></i></a>
+                  <ul>
+                    <li><a href="./doctor1.html">Dr. MAHESH YADDANAPUDI</a></li>
+                    <li><a href="./doctor2.html">Dr. B. SAI TEJASWI	 </a></li>
+                  </ul>
+              </li>
+              <li class="dropdown"><a href="#"><span>Departments</span> <i class="bi bi-chevron-down"></i></a>
+                  <ul>
+                    <li><a href="./physio.html">PHYSIOTHERAPY</a></li>
+                    <li><a href="./ortho.html">ORTHOPEDIC</a></li>
+                    <li><a href="./neuro.html">NEUROLOGY</a></li>
+                  </ul>
+              </li>
+              <li class="dropdown"><a href="#"><span>Other Pages</span> <i class="bi bi-chevron-down"></i></a>
+                  <ul>
+                    <li><a href="./careers.html">CAREERS</a></li>
+                    <li><a href="./testimonial.html">TESTIMONIALS</a></li> 
+                  </ul>
+              </li>
+              <li><a class="nav-link scrollto" href="./gallary.html">Gallery</a></li>
+              <li><a class="nav-link scrollto" href="./contactus.html">Contact Us</a></li>
+          </ul>
+              <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+      <a href="./form.html" class="appointment-btn scrollto"><span class="d-none d-md-inline">Make an</span> Appointment</a>
+  </div>
+</header>
+<!-- ======= Header Ends ======= --> 
+
+
+
+<!-- ======= Breadcrumbs ======= -->
+<section id="breadcrumbs" class="breadcrumbs">
+<div class="container">
+
+<div class="d-flex justify-content-between align-items-center">
+  <h2>Doctors</h2>
+  <ol>
+    <li><a href="../../index.html">Home</a></li>
+    <li><a href="#">Doctors</a></li>
+    <li>Dr. B. Sai Tejaswi</li>
+  </ol>
+</div>
+
+</div>
+</section>
+<!-- ======= Breadcrumbs Ends ======= -->
+
+<!-- doctors info start -->
+<section class="" style="padding-bottom: 78px; padding-top: 20px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <div class="d-p-info__col-1">
+                    <img  alt="" src="../images/doctorpic2.jpg">
+        
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="d-p-info__col-2">
+                    <div>
+                        <h1 class="section-heading d-p-info__name">Dr B Sai Tejaswi </h1>
+                        <p class="d-p-info__designation">Consultant, PHYSIOTHERAPHIST</p>
+                        <p class="d-p-info__speciality"> PHYSIOTHERAPHIST</p>
+                        <p class="d-p-info__location">Mandapeta</p>
+                    </div>
+                    <div class="d-p-info__btn-wrapper">
+                         <p class="d-p-info_btn-wrapper_btn"> <span>--</span> Years of Experience</p>
+                    </div>
+                    <div class="d-p-info__appointment-wrapper">
+                        <a data-name="Dr. Ramesh Gudapati" data-speciality="" data-branch="Financial District" href="form.html" class="d-p-info_appointment-wrapper_btn">
+                            <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.14702 0V2H13.2446V0H15.2771V2H19.3421C19.9034 2 20.3584 2.44772 20.3584 3V19C20.3584 19.5523 19.9034 20 19.3421 20H1.04946C0.488203 20 0.0332031 19.5523 0.0332031 19V3C0.0332031 2.44772 0.488203 2 1.04946 2H5.1145V0H7.14702ZM18.3259 10H2.06572V18H18.3259V10ZM6.13076 12V14H4.09824V12H6.13076ZM11.2121 12V14H9.17954V12H11.2121ZM16.2934 12V14H14.2608V12H16.2934ZM5.1145 4H2.06572V8H18.3259V4H15.2771V6H13.2446V4H7.14702V6H5.1145V4Z" fill="#E3000F"></path>
+                            </svg>
+                            <span>Book a Physical Consultation</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="doc-info__col-3">
+                    <ul class="doc-info__tabs">
+                        <!-- <a href="" class="doc-info_appointment-wrapper_btn"></a> -->
+                        <li class="doc-info__tab_item">
+                            <a data-toggle="collapse" href="#Qualifications" aria-expanded="false" aria-controls="Qualifications" 
+                                data-abc="true" class="collapsed" onclick="scrollToSection('section1')">Qualifications </a>
+                        </li>
+                        <li class="doc-info__tab_item">
+                         <a data-toggle="collapse" href="#Experience" aria-expanded="false" aria-controls="Experience" 
+                            data-abc="true" class="collapsed" onclick="scrollToSection('section2')">Experience </a>
+                        </li>
+                        <li class="doc-info__tab_item">
+                            <a data-toggle="collapse" href="#Expertise" aria-expanded="false" aria-controls="Expertise" 
+                                data-abc="true" class="collapsed" onclick="scrollToSection('section3')"> Field of Expertise </a>
+                        </li>
+                        <li class="doc-info__tab_item">
+                            <a data-toggle="collapse" href="#Research" aria-expanded="false" aria-controls="Research" 
+                                data-abc="true" class="collapsed" onclick="scrollToSection('section4')"> Research &amp; Publications </a>
+                        </li>
+                        <li class="doc-info__tab_item"  >
+                            <a data-toggle="collapse" href="#Certifications" aria-expanded="false" aria-controls="collapse-2" 
+                                data-abc="true" class="collapsed" onclick="scrollToSection('section5')">Certifications &amp; Memberships</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="accordion_sec">
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <div class="col-lg-10">
+                <div class="mt-4">
+                    <div class="accordion" id="accordion" role="tablist">
+                        <div class="card">
+            <div id="section1"></div>
+                            <div class="card-header" role="tab" id="heading-1">
+                              <h6 class="mb-0">
+                                <a data-toggle="collapse" href="#Qualifications" aria-expanded="false" aria-controls="Qualifications" data-abc="true" class="collapsed">
+                                  Qualifications
+                                </a>
+                              </h6>
+                            </div>
+                            <div id="Qualifications" class="collapse" role="tabpanel" aria-labelledby="heading-1" data-parent="#accordion" style="">
+                              <div class="card-body">
+                                <div class="row">
+                                  <div class="col-3">
+                                    <img src="../images/qualifications_doc.png" class="mw-100" alt="image">                              
+                                  </div>
+                                  <div class="col-9">
+                                    <p class="mb-0"><ul><li>bpt </li><li>dyt - capi </li></ul></p>                          
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                        </div>	<!-- 1st card ends -->
+                        <div class="card">
+            <div id="section2"></div>
+                            <div class="card-header" role="tab" id="heading-2">
+                              <h6 class="mb-0">
+                                <a class="collapsed" data-toggle="collapse" href="#Experience" aria-expanded="false" aria-controls="Experience" data-abc="true">
+                                 Experience
+                                </a>
+                              </h6>
+                            </div>
+                            <div id="Experience" class="collapse" role="tabpanel" aria-labelledby="heading-2" data-parent="#accordion">
+                              <div class="card-body">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <img src="../images/exp_doc.png" class="mw-100" alt="image">                              
+                                      </div>
+                                    <div class="pl-3 mt-4 col-9">
+                                        -----
+                                    </div>
+                                </div>
+                                
+                              </div>
+                            </div>
+                        </div>  <!-- 2nd card ends -->
+                        <div class="card">
+            <div id="section3"></div>
+                            <div class="card-header" role="tab" id="heading-3">
+                              <h6 class="mb-0">
+                                <a class="collapsed" data-toggle="collapse" href="#Expertise" aria-expanded="false" aria-controls="Expertise" data-abc="true">
+                                  Field of Expertise
+                                </a>
+                              </h6>
+                            </div>
+                            <div id="Expertise" class="collapse" role="tabpanel" aria-labelledby="heading-3" data-parent="#accordion">
+                              <div class="card-body">
+                                <p class="mb-0">PHYSIOTHERAPHIST</p>
+                              </div>
+                            </div>
+                        </div>  <!-- 3rd card ends --> 
+                        <div class="card">
+                            <div class="card-header" role="tab" id="heading-4">
+                              <h6 class="mb-0">
+                                <a data-toggle="collapse" href="#Research" aria-expanded="false" aria-controls="Research" data-abc="true" class="collapsed">
+                                 Research &amp; Publications
+                                </a>
+                              </h6>
+                            </div>
+                            <div id="Research" class="collapse" role="tabpanel" aria-labelledby="heading-1" data-parent="#accordion" style="">
+                              <div class="card-body">
+                                <div class="row">
+                                  <div class="col-3">
+                                    <img src="../images/research_doc.png" class="mw-100" alt="image">                              
+                                  </div>
+                                  <div class="col-9">
+                                    <p>role of physiotheraphy management in swimmer shoulder</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                        </div>  <!-- 4th card ends -->
+                        <div class="card" id="section4">
+                            <div class="card-header" role="tab" id="heading-4">
+                              <h6 class="mb-0">
+                                <a data-toggle="collapse" href="#Certifications" aria-expanded="false" aria-controls="Certifications" data-abc="true" class="collapsed">
+                                Certifications &amp; Memberships
+                                </a>
+                              </h6>
+                            </div>
+                            <div id="Certifications" class="collapse" role="tabpanel" aria-labelledby="heading-1" data-parent="#accordion" style="">
+                              <div class="card-body">
+                                <div class="row">
+                                  <div class="col-3">
+                                    <img src="https://img.icons8.com/bubbles/100/000000/administrator-male.png" class="mw-100" alt="image">                              
+                                  </div>
+                                  <div class="col-9">
+                                    <p class="mb-0"> appta member</p>                          
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                        </div>  <!-- 5th card ends -->
+                     </div> <!-- accordion ends -->
+                </div> 
+            </div>
+        </div> <!-- row ends --> 
+    </div> <!-- container ends -->
+</section>
+<div id="section5"></div>
+<!-- -----------------------------------------Accodion ends--------------------------------------------------------- -->
+
+<!-- ======= Footer Starts ======= -->
+<footer id="footer">
+
+  <!-- <div class="footer-newsletter">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-6">
+          <h4>Join Our Newsletter</h4>
+          <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+          <form action="" method="post">
+            <input type="email" name="email"><input type="submit" value="Subscribe">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  <div class="footer-top">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-lg-3 col-md-6 footer-contact">
+          <h3><img src="../images/mainLogo.jpg"></h3>
+          <p>Tarvanipeta,Mandapeta<br>
+            
+            East Godawari Andhra Pradesh 533308     <br><br>
+            <strong>Phone:</strong> +91 62816 80037<br>
+            <strong>Email:</strong> saitejaswiortho@gmail.com<br>
+          </p>
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="../../index.html">Home</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="./aboutus.html">About us</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="./testimonial.html">Testimonials</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="./gallary.html">Gallery</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="./contactus.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="./ortho.html">Orthopedic</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="./physio.html">Pysiotherapy</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="./neuro.html">Neurology</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-links">
+          <h4>Our Social Networks</h4>
+         <!--  <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p> -->
+          <div class="social-links mt-3">
+            <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="google-plus"><i class="bi bi-skype"></i></a>
+            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container py-4">
+    <div class="copyright">
+      © Copyright <strong><span>Sri Sai Tejaswi</span></strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+      Designed by <select><option>K Vamsi</option><option>G Anusha</option><option>P Pujitha</option><option>K Tarun</option></select>
+    </div>
+  </div>
+</footer>
+<!-- ====Fotter ends==== -->
+    <script>
+        function scrollToSection(sectionId) {
+               var section = document.getElementById(sectionId);
+               section.scrollIntoView({ behavior: 'smooth' });
+           }
+     </script>
+	<script src="../javascript/header.js"></script> 
+</body>
+</html>

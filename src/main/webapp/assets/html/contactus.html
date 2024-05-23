@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimoniala page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../css/headerfooter.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <style>.space-md, .contactus {
+        padding-bottom: 100px;
+    }
+    
+    .space, .contactus {
+        padding-top: 130px;
+    }
+    .contactus .animated {
+        animation-duration: 1s;
+        animation-fill-mode: both;
+    }
+    .mt-n2 {
+        margin-top: -0.5rem;
+    }
+    
+    .contactus .text-theme {
+        color: #07ccec !important;
+    }
+    .contactus .form-group {
+        position: relative;
+    }
+    .contactus .form-select.style3, .contactus .form-control.style3 {
+        border: 2px solid #dee4eb;
+        background-color: #ffffff;
+    }
+    .contactus .form-select.style3, .contactus .form-select.style2, .contactus .form-control.style3, .contactus .form-control.style2 {
+        height: 60px;
+        color: #27477d;
+        font-size: 14px;
+        border-radius: 9999px;
+        padding-left: 30px;
+        transition: all ease .4s;
+    }
+    
+    .form-select, .form-control {
+        padding: 0 30px;
+        padding-right: 60px;
+        font-weight: 400;
+    }
+    .contactus .form-select.style3~i, .contactus .form-select.style2~i, .contactus .form-control.style3~i, .contactus .form-control.style2~i {
+        font-size: 16px;
+        top: 22px;
+        color: #27477d;
+        right: calc(var(--bs-gutter-x) + 15px);
+    }
+    .contactus .form-wrap3 {
+        --bs-gutter-x: 1rem;
+       
+    }
+    .contactus .form-group>i {
+        position: absolute;
+    }
+    .contactus textarea.form-control.style3, textarea.form-control.style2 {
+        border-radius: 20px;
+    }
+    .contactus textarea.form-control {
+        min-height: 150px;
+        padding-top: 17px;
+        padding-bottom: 17px;
+    }
+    
+    .sendmsg-btn.style3, .sendmsg-btn.style2 {
+        margin-left: calc(40px/2);
+    }
+    .sendmsg-btn {
+        position: relative;
+        display: inline-block;
+        border: none;
+        text-align: center;
+        background-color: #07ccec;
+        color: #ffffff;
+        font-size: 16px;
+        line-height: 1;
+        font-weight: 700;
+        padding: 19.5px 48px;
+        border-radius: 9999px;
+    }
+    .sendmsg-btn.style3:before, .sendmsg-btn.style2:before {
+        content: "";
+        position: absolute;
+        left: calc(40px/-2);
+        top: 50%;
+        width: 40px;
+        height: 40px;
+        margin-top: calc(40px/-2);
+        background-color: #ffffff;
+        border-radius: 50%;
+        box-shadow: inset 0px 5px 5px 0px rgba(7,204,236,.3);
+        transition: inherit;
+    }
+    
+    .sendmsg-btn {
+        transition: all ease .4s;
+    }
+    .sendmsg-btn.style3 i, .sendmsg-btn.style2 i {
+        position: absolute;
+        left: calc(30px/-2);
+        top: 50%;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        margin-top: calc(30px/-2);
+        border-radius: 50%;
+        background-color: #07ccec;
+        font-size: 14px;
+        transition: inherit;
+    }
+    .sendmsg-btn i {
+        display: inline-block;
+    }
+    .sendmsg-btn.style2:hover, .sendmsg-btn.style3 {
+        background-color: #27477d;
+    }
+    .sendmsg-btn.style2:hover i, .sendmsg-btn.style3 i {
+        background-color: #27477d;
+    }
+    .sendmsg-btn:hover:before, .sendmsg-btn:hover i {
+        animation: shake .82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+    }
+    @media (max-width: 1399px){
+    .contactus .form-wrap3 {
+        padding: 60px 60px 60px 60px;
+    }
+    }
+    
+    
+    /* <!-- Contact info --> */
+    .mb-30 {
+        margin-bottom: 30px;
+    }
+    .mb-10 {
+        margin-bottom: 10px;
+    }
+    .mb-15 {
+        margin-bottom: 15px;
+    }
+    .mt-n2 {
+        margin-top: -0.5rem;
+    }
+    .pt-15 {
+        padding-top: 15px;
+    }
+    
+    
+    .contactus .h1, .contactus h1, .contactus .h2, .contactus h2, .contactus .h3, 
+    .contactus h3, .contactus .h4, .contactus h4, .contactus .h5, .contactus h5, 
+    .contactus .h6, .contactus h6 {
+        color: #27477d;
+        text-transform: none;
+        font-weight: 700;
+        line-height: 1.3;
+        margin: 0 0 15px 0;
+    }
+    .contactus p {
+        margin: 0 0 15px 0;
+        color: #888c92;
+        line-height: 1.7;
+    }
+    
+    .contactus .contact-info-table {
+        margin: 0 0 1.5em;
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+    .contactus .contact-info-table td {
+        border-bottom: 1px dashed #dfdfe0;
+        border-top: none;
+        padding-left: 0;
+        padding-right: 10px;
+    }
+    .contactus .contact-info-table td, .contact-info-table th {
+        padding: 9px;
+    }
+    .contact-info-table td+td {
+        padding-right: 0;
+        text-align: right;
+    }
+    
+    .contactus .contact-information .address {
+        font-size: 18px;
+    }
+    .contactus .contact-information .address i, .CustomerSupports i  {
+       margin-right: 0.5rem;
+    }
+    
+    .contactus .CustomerSupports a {
+        color: #07ccec;
+        text-decoration: none;
+        outline: 0;
+        transition: all ease .4s;
+    }</style>
+</head>
+<body>
+ <!-- ======= Top Bar ======= -->
+ <div id="topbar" class="d-flex align-items-center fixed-top">
+    <div class="container d-flex align-items-center justify-content-center justify-content-md-between">
+      <div class="align-items-center d-none d-md-flex">
+        <i class="bi bi-geo-alt-fill"></i> Tarvanipeta, Mandapeta 533308
+      </div>
+      <div class="d-flex align-items-center">
+        <i class="bi bi-phone"></i> Call us now +91 62816 80037
+      </div>
+    </div>
+  </div>
+<!-- ======= Top Bar Ends======= --> 
+
+<!-- ======= Header ======= -->
+    <header id="header" class="fixed-top">
+        <div class="container d-flex align-items-center">
+          <a href="../../index.html" class="logo me-auto"><img src="../images/mainLogo.jpg" alt=""></a>
+            <nav id="navbar" class="navbar order-last order-lg-0">
+                <ul>
+                    <li><a class="nav-link scrollto" href="../../index.html">Home</a></li>
+                    <li><a class="nav-link scrollto" href="./aboutus.html">About Us</a></li>
+                    <li class="dropdown"><a href="#"><span>Doctors</span> <i class="bi bi-chevron-down"></i></a>
+                        <ul>
+                          <li><a href="./doctor1.html">Dr. MAHESH YADDANAPUDI</a></li>
+                          <li><a href="./doctor2.html">Dr. B. SAI TEJASWI	 </a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown"><a href="#"><span>Departments</span> <i class="bi bi-chevron-down"></i></a>
+                        <ul>
+                          <li><a href="./physio.html">PHYSIOTHERAPY</a></li>
+                          <li><a href="./ortho.html">ORTHOPEDIC</a></li>
+                          <li><a href="./neuro.html">NEUROLOGY</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown"><a href="#"><span>Other Pages</span> <i class="bi bi-chevron-down"></i></a>
+                        <ul>
+                          <li><a href="./careers.html">CAREERS</a></li>
+                          <li><a href="./testimonial.html">TESTIMONIALS</a></li> 
+                        </ul>
+                    </li>
+                    <li><a class="nav-link scrollto" href="./gallary.html">Gallery</a></li>
+                    <li><a class="nav-link scrollto active" href="./contactus.html">Contact Us</a></li>
+                </ul>
+                    <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+            <a href="./form.html" class="appointment-btn scrollto"><span class="d-none d-md-inline">Make an</span> Appointment</a>
+        </div>
+    </header>
+<!-- ======= Header Ends ======= --> 
+
+
+
+<!-- ======= Breadcrumbs ======= -->
+<section id="breadcrumbs" class="breadcrumbs">
+    <div class="container">
+
+      <div class="d-flex justify-content-between align-items-center">
+        <h2>Contact Us</h2>
+        <ol>
+          <li><a href="../../index.html">Home</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li>Careers</li>
+        </ol>
+      </div>
+
+    </div>
+  </section>
+  <!-- ======= Breadcrumbs Ends ======= -->
+
+    <!-- contact us Start -->
+    <section class="vs-contact-wrapper vs-contact-layout1 space-top space-md-bottom contactus">
+        <div class="container">
+            <div class="row gx-60 align-items-center">
+                <div class="col-lg-6 wow fadeInUp animated " data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: g;">
+                    <form action="mail.php" method="POST" class="ajax-contact form-wrap3 mb-30 p-sm-5" data-bg-color="#f3f6f7" style="background-color: rgb(243, 246, 247);">
+                        <div class="form-title">
+                            <h3 class="mt-n2 fls-n2 mb-0">Send Us a Message</h3>
+                            <p class="text-theme mb-4">Your email address will not be published*</p>
+                        </div>
+                        <div class="form-group mb-15">
+                            <input type="text" class="form-control style3" name="name" id="name" placeholder="Name"> 
+                            <i class="bi bi-person"></i>
+                        </div>
+                        <div class="form-group mb-15">
+                            <input type="text" class="form-control style3" name="email" id="email" placeholder="E-mail"> 
+                            <i class="bi bi-envelope"></i>
+                        </div>
+                        <div class="form-group mb-15">
+                            <textarea name="message" id="message" cols="30" rows="3" class="form-control style3" placeholder="Message"></textarea> 
+                            <i class="bi bi-pencil-fill"></i>
+                        </div>
+                        <div class="form-btn pt-15">
+                            <button class="sendmsg-btn style2">Send Message<i class="bi bi-chevron-right"></i></button>
+                        </div>
+                        <p class="form-messages mb-0 mt-3"></p>
+                    </form>
+                </div> 
+             <!-- Contact Info Div Starts -->
+                <div class="col-lg-6">
+                    <div class="contact-information mb-30">
+                        <h2 class="mt-n2">We are here for help you! Arrange a meeting.</h2>
+                        <!-- <div class="row">
+                            <div class="col-xxl-10"> -->
+                                <p>Holisticly engage inexpensive architectures via high-quality solutions. Efficiently implement synergistic 
+                                    applications vis-a-vis best-of-breed ecommerce onotonectally enable client-based portals
+                                </p>
+                            <!-- </div>
+                        </div> -->
+                        <h3 class="h4 pt-2 mb-10">Opening Hours</h3>
+                            <table class="contact-info-table">
+                                <tbody>
+                                    <tr><td>Mon - Fri:</td><td>8.00 am - 8.00 pm</td></tr>
+                                    <tr><td>Saturday:</td><td>9.00 am - 6.00 pm</td></tr>
+                                    <tr><td>Sunday:</td><td>9.00 am - 6.00 pm</td></tr>
+                                </tbody>
+                            </table>
+                        <h4 class="pt-2 mb-10">Address</h4>
+                        <p class="fs-md address">
+                            <i class="bi bi-geo-alt-fill me-2"></i>tarvanipeta, Mandapeta
+                        </p>
+                        <h4 class="pt-2 mb-2">Customer Supports</h4>
+                            <h4 class="h3 font-theme2 mb-0 CustomerSupports">
+                                <a href="tel:+91 62816 80037"><i class="bi bi-phone-fill"></i>+91 62816 80037</a>
+                            </h4>
+                    </div>
+                </div>
+             <!-- Contact Info Div Ends -->
+            </div> <!-- Row ends -->
+        <!-- Location Div Starts -->
+            <div class="ratio ratio-21x9 contact-map mt-70 mb-30">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.1583088354!2d-74.11976389828038!3d40.697663748695746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sbd!4v1615903229405!5m2!1sen!2sbd" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
+            </div> 
+        <!-- Location Div Ends -->
+        </div>      <!-- container ends -->
+    </section>		<!-- Section ends -->
+
+
+
+ <!-- ======= Footer Starts ======= -->
+ <footer id="footer">
+
+    <!-- <div class="footer-newsletter">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+            <h4>Join Our Newsletter</h4>
+            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3><img src="../images/mainLogo.jpg"></h3>
+            <p>Tarvanipeta,Mandapeta<br>
+              
+              East Godawari Andhra Pradesh 533308     <br><br>
+              <strong>Phone:</strong> +91 62816 80037<br>
+              <strong>Email:</strong> saitejaswiortho@gmail.com<br>
+            </p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bi bi-chevron-right"></i> <a href="../../index.html">Home</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="./aboutus.html">About us</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="./testimonial.html">Testimonials</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="./gallary.html">Gallery</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="./contactus.html">Contact Us</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bi bi-chevron-right"></i> <a href="./ortho.html">Orthopedic</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="./physio.html">Pysiotherapy</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="./neuro.html">Neurology</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Social Networks</h4>
+           <!--  <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p> -->
+            <div class="social-links mt-3">
+              <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+              <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="google-plus"><i class="bi bi-skype"></i></a>
+              <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container py-4">
+      <div class="copyright">
+        © Copyright <strong><span>Sri Sai Tejaswi</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        Designed by <select><option>K Vamsi</option><option>G Anusha</option><option>P Pujitha</option><option>K Tarun</option></select>
+      </div>
+    </div>
+  </footer>
+  <!-- ====Fotter ends==== -->
+    <script src="../javascript/header.js"></script> 
+</body>
+</html>

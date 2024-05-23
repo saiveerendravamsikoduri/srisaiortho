@@ -1,0 +1,159 @@
+.department_section {
+    position: relative;
+    min-height: 60vh;
+    padding: 50px 0px 130px;
+}
+
+.department_innertext p {
+    font-size: 15px;
+    margin-bottom: 12px;
+    line-height: 24px;
+    color: #1d1d1d;
+}	
+.department_innertext h2 {
+    font-size: 25px;
+    font-weight: 600;
+    color: #221963;
+    margin: 25px 0 6px;
+}	
+.department_innertext h3 {
+    font-size: 19px;
+    font-weight: 600;
+    color: #B81F40;
+    margin: 16px 0 9px;
+}
+.department_section h1, .department_section h2, .department_section h3, 
+.department_section h4, .department_section h5, .department_section h6 {
+    position: relative;
+    font-weight: normal;
+    background: none;
+    line-height: 1.2em;
+	font-family:'Rajdhani', sans-serif;
+}
+.department_innertext .ol_styles {
+    position: relative;
+    list-style-type: none;
+    padding-left: 28px;
+}
+.department_innertext .ol_styles li {
+    position: relative;
+    padding-left: 20px;
+    color: #333;
+    line-height: 25px;
+}
+.department_innertext .ol_styles li::before {
+    position: absolute;
+    left: 0;
+    top: 8px;
+    height: 10px;
+    width: 10px;
+    background-color: #ff87a1;
+    content: "";
+}
+.team_block {
+    position: relative;
+}
+.department_innertext .team_block::before {
+    content: "";
+    position: absolute;
+    width: 63%;
+    height: 50%;
+    background: #ff7b99;
+    right: -20px;
+    z-index: -1;
+    top: -20px;
+}
+
+.team_img img {
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+}
+.team_info {
+    position: relative;
+    text-align: center;
+    display: table-cell;
+    width: 500px;
+    height: 135px;
+    vertical-align: middle;
+    padding: 0 10px;
+    background: linear-gradient(to bottom, #f9f9f9, #d6d6d6);
+    box-shadow: 0px 11px 5px #bfbfbf;
+}
+.team_info::before {
+    content: "";
+    position: absolute;
+    width: 83px;
+    height: 4px;
+    background-color: #120e38;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+    bottom: 0px;
+    transition: all ease-in-out .6s;
+}
+.department_innertext .team_info h3 {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 21px;
+    margin: 0;
+}
+.department_innertext .team_info p {
+    color: #000;
+    font-size: 16px;
+    line-height: 18px;
+    margin-top: 9px;
+    position: relative;
+    margin: 9px 0 0;
+}
+.team_info a {
+    position: absolute;
+    width: 100px;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background: #cc3052;
+    color: #fff;
+    padding: 5px 0;
+    transition: all ease-in-out .8s;
+    opacity: 0;
+	text-decoration:none;
+}
+.team_block:hover .team_info:before {
+    width: 100%;
+    height: 100%;
+}
+.team_block:hover h3, .team_block:hover p {
+    color: #ffff;
+	position:relative;
+}
+.team_block:hover a {
+    top: -34px;
+    opacity: 1;
+    color: #fff;
+	
+}
+.team_block a:hover {
+    text-decoration: none;
+}
+@media only screen and (max-width: 800px){
+.team_block {
+    position: relative;
+    margin-bottom: 10px;
+}
+.team_info {
+    box-shadow: 0px 6px 5px #bfbfbf;
+}
+.department_section {
+    padding: 50px 10px 45px;
+}
+.team_info h3{
+font-size:15px !important;
+
+}
+.team_info p{
+font-size:13px !important;
+
+}
+}

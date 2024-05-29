@@ -26,7 +26,7 @@ public class AdminLogin extends HttpServlet {
 			HttpSession session=request.getSession();
 			session.setAttribute("username", username);
 	//		request.setAttribute("username", username);
-			RequestDispatcher rd=request.getRequestDispatcher("Admin.jsp");
+			RequestDispatcher rd=request.getRequestDispatcher("./assets/jsp/Admin.jsp");
 			rd.forward(request, response);
 		}
 		else
